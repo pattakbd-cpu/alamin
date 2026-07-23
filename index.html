@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alamin — WordPress Developer | Premium Portfolio</title>
+  <meta name="description"
+    content="Alamin is a passionate WordPress Developer specializing in WordPress, WooCommerce, HTML, CSS, JavaScript and PHP. Explore his projects and skills.">
+  <meta name="keywords" content="Alamin, WordPress Developer, Frontend Developer, Website Designer, Portfolio">
+  <meta name="author" content="Alamin">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:title" content="Alamin — WordPress Developer">
+  <meta property="og:description" content="Premium personal portfolio of Alamin, a passionate WordPress Developer.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232563EB%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22Arial%22>A</text></svg>">
+
+  <!-- Google Fonts: Poppins (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================================================== -->
+  <!-- PRELOADER                                               -->
+  <!-- ===================================================== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-mark">
+      <span class="loader-letter">A</span>
+    </div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- BACKGROUND LAYERS (animated gradient + particles)       -->
+  <!-- ===================================================== -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ===================================================== -->
+  <!-- NAVBAR                                                  -->
+  <!-- ===================================================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">Alamin</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-nav>🏠 Home</a></li>
+        <li><a href="#about" class="nav-link" data-nav>👨 About</a></li>
+        <li><a href="#skills" class="nav-link" data-nav>💻 Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-nav>📂 Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-nav>✉️ Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="mailto:alamimlslam2010@gmail.com" class="nav-email" title="Email Alamin">alamimlslam2010@gmail.com</a>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark and light mode">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z" />
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================================================== -->
+    <!-- HERO SECTION                                            -->
+    <!-- ===================================================== -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+
+        <div class="hero-left reveal">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Alamin</h1>
+          <h2 class="hero-role">
+            <span id="typing-text"></span><span class="cursor">|</span>
+          </h2>
+
+          <p class="hero-desc">
+            I build fast, secure and beautifully crafted WordPress &amp; WooCommerce
+            websites — turning ideas into real, professional digital experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-label">🚀 10+ Projects Completed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">💻 WordPress Developer</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">🌍 Responsive Websites</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">📚 Always Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="avatar-frame">
+            <div class="avatar-core">
+              <div class="avatar-glow"></div>
+              <div class="avatar-ring"></div>
+              <div class="avatar-circle">
+                <img src="assets/hero-photo.png" alt="Alamin — WordPress Developer" class="avatar-photo" width="640"
+                  height="640" loading="eager">
+              </div>
+            </div>
+            <div class="badge-float badge-1">WordPress</div>
+            <div class="badge-float badge-2">WooCommerce</div>
+            <div class="badge-float badge-3">PHP</div>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- ABOUT SECTION                                           -->
+    <!-- ===================================================== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">A Passionate WordPress Developer</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm <strong>Alamin</strong> — a passionate WordPress developer who enjoys building modern, responsive,
+              and user-friendly websites. I love creating websites, exploring new technologies, and continuously
+              improving my development skills.</p>
+
+            <p>I work with WordPress, WooCommerce, HTML, CSS, JavaScript, and PHP to build websites that are fast,
+              secure, and easy to manage. I enjoy turning ideas into real projects and always focus on writing clean,
+              professional code.</p>
+
+            <p>Besides development, I enjoy sharing what I learn through tutorials, guides, and helpful content. I
+              believe that learning never stops, and sharing knowledge helps everyone grow together.</p>
+
+            <p>My goal is to become a world-class WordPress developer and help businesses build powerful online
+              experiences while inspiring others to learn web development.</p>
+
+            <blockquote class="about-quote">
+              “Great developers never stop learning—and they never stop sharing.”
+            </blockquote>
+          </div>
+
+          <div class="about-photo-wrap reveal">
+            <div class="blob blob-1" aria-hidden="true"></div>
+            <div class="blob blob-2" aria-hidden="true"></div>
+            <div class="float-circle circle-1" aria-hidden="true"></div>
+            <div class="float-circle circle-2" aria-hidden="true"></div>
+            <div class="about-photo-glow" aria-hidden="true"></div>
+            <div class="about-photo-card">
+              <img src="assets/about-photo.png" alt="Alamin sitting and giving a thumbs up" class="about-photo"
+                loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid reveal">
+          <div class="glass-card stat-card">
+            <div class="glass-icon">🚀</div>
+            <h3>10+ Projects Completed</h3>
+            <p>Successfully completed modern web development projects.</p>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="glass-icon">💻</div>
+            <h3>WordPress Developer</h3>
+            <p>Building fast, secure and responsive WordPress websites.</p>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="glass-icon">🌍</div>
+            <h3>Responsive Websites</h3>
+            <p>Optimized for Mobile, Tablet and Desktop devices.</p>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="glass-icon">📚</div>
+            <h3>Always Learning</h3>
+            <p>Continuously learning new technologies and improving my skills every day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- SKILLS SECTION                                          -->
+    <!-- ===================================================== -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Skills</span>
+          <h2 class="section-title">Tools I Work With</h2>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-item" data-percent="90">
+            <div class="skill-top"><span>HTML</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="85">
+            <div class="skill-top"><span>CSS</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="75">
+            <div class="skill-top"><span>JavaScript</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="95">
+            <div class="skill-top"><span>WordPress</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="88">
+            <div class="skill-top"><span>WooCommerce</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="70">
+            <div class="skill-top"><span>PHP</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="92">
+            <div class="skill-top"><span>Responsive Design</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-item" data-percent="65">
+            <div class="skill-top"><span>Git</span><span class="skill-percent">0%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PROJECTS SECTION                                        -->
+    <!-- ===================================================== -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Projects</span>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+
+        <div class="projects-grid reveal">
+
+          <article class="project-card">
+            <div class="project-image project-img-1" aria-hidden="true"
+              style="background-image:url('assets/perfect-residential-school.png');background-size:cover;background-position:top center;">
+            </div>
+            <div class="project-body">
+              <h3>Perfect Residential School Website</h3>
+              <p>A modern, fully responsive school website built using HTML, CSS and JavaScript. It includes a
+                premium homepage, teachers section, classes, notice board, contact section and smooth animations.</p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a href="https://perfectresidentialschool.netlify.app" class="btn btn-project" target="_blank"
+                rel="noopener noreferrer">View Project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-img-2" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Responsive Login Form</h3>
+              <p>A sleek, fully responsive login form with real-time validation and smooth micro-interactions.</p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a href="#" class="btn btn-project">View Project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-img-3" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Modern Calculator</h3>
+              <p>A minimal, keyboard-friendly calculator with a glassmorphism interface and smooth button feedback.</p>
+              <div class="tech-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a href="#" class="btn btn-project">View Project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-img-4" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Car Game</h3>
+              <p>A fun browser-based car dodging game built with vanilla JavaScript and canvas animation.</p>
+              <div class="tech-tags">
+                <span>JavaScript</span><span>Canvas</span><span>CSS</span>
+              </div>
+              <a href="#" class="btn btn-project">View Project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-img-5" aria-hidden="true"></div>
+            <div class="project-body">
+              <h3>Space Shooter Game</h3>
+              <p>An arcade-style space shooter with score tracking, levels, and responsive controls.</p>
+              <div class="tech-tags">
+                <span>JavaScript</span><span>Canvas</span><span>HTML</span>
+              </div>
+              <a href="#" class="btn btn-project">View Project →</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card-future">
+            <div class="future-icon">＋</div>
+            <div class="project-body">
+              <h3>More Coming Soon</h3>
+              <p>This space is reserved for future projects. Stay tuned for new work!</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- CONTACT SECTION                                         -->
+    <!-- ===================================================== -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section-title">Let's Work Together</h2>
+        </div>
+
+        <div class="contact-grid reveal">
+
+          <div class="contact-info">
+            <p class="contact-lead">Have a project in mind, or just want to say hello? My inbox is always open.</p>
+
+            <div class="contact-detail">
+              <span class="contact-icon">📧</span>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:alamimlslam2010@gmail.com">alamimlslam2010@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="social-icons">
+              <a href="https://www.facebook.com/md.alamin.994661" class="social-icon" title="Facebook"
+                aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.21 10.44 22v-7.02H7.9v-2.92h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.92h-2.33V22C18.34 21.21 22 17.08 22 12.06z" />
+                </svg>
+              </a>
+              <a href="https://wa.me/8801616973710" class="social-icon" title="WhatsApp" aria-label="WhatsApp"
+                target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.09.2-.14.32-.28.49-.14.17-.29.38-.42.5-.14.14-.29.29-.12.57.17.28.75 1.24 1.61 2 .1.11 1.11.99 1.79 1.24.19.08.35.29.51.3.16.02.34-.02.48-.16.14-.14.6-.7.76-.94.16-.24.32-.2.53-.12.21.08 1.36.64 1.6.76.24.12.4.18.46.28.06.1.06.6-.18 1.27z" />
+                </svg>
+              </a>
+              <a href="mailto:alamimlslam2010@gmail.com" class="social-icon" title="Email" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 6 10 7L22 6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- FOOTER                                                  -->
+  <!-- ===================================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark">A</span>
+        <div>
+          <h3>Alamin</h3>
+          <p>WordPress Developer</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/md.alamin.994661" class="social-icon" title="Facebook" aria-label="Facebook"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.21 10.44 22v-7.02H7.9v-2.92h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.45 2.92h-2.33V22C18.34 21.21 22 17.08 22 12.06z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/8801616973710" class="social-icon" title="WhatsApp" aria-label="WhatsApp"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.21h.01c5.46 0 9.9-4.45 9.9-9.92C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.13.11-1.82-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.4.26-.28.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.09.2-.14.32-.28.49-.14.17-.29.38-.42.5-.14.14-.29.29-.12.57.17.28.75 1.24 1.61 2 .1.11 1.11.99 1.79 1.24.19.08.35.29.51.3.16.02.34-.02.48-.16.14-.14.6-.7.76-.94.16-.24.32-.2.53-.12.21.08 1.36.64 1.6.76.24.12.4.18.46.28.06.1.06.6-.18 1.27z" />
+            </svg>
+          </a>
+          <a href="mailto:alamimlslam2010@gmail.com" class="social-icon" title="Email" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 6 10 7L22 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2026 Alamin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
